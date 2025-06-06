@@ -2,7 +2,7 @@
 
 // ... các hàm getRiskLevel, getActiveSymptoms, displayResult ...
 
-const SVM_API_URL = "https://<your-render-subdomain>.onrender.com/predict_stroke_risk";
+const SVM_API_URL = "https://stroke-web-app.onrender.com/predict_stroke_risk";
 
 // Xử lý form submit
 document
