@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pickle
 import numpy as np
+import os
 # import pandas as pd # Không cần thiết nếu bạn không dùng DataFrame ở đây
 
 app = Flask(__name__)
@@ -116,6 +117,5 @@ def predict_stroke_risk():
         print(f"DEBUG: Lỗi xảy ra trong try block: {str(e)}") # Debugging print
         return jsonify({"error": f"Lỗi trong quá trình dự đoán: {str(e)}"}), 500
 
-import os
 port = int(os.environ.get("PORT", 5000))
 app.run(debug=True, host="0.0.0.0", port=port)
